@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RatnaSindhu App</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+.subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.card {
+    background: white;
+    color: black;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 350px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 18px;
+    background: #28a745;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #218838;
+}
+
+.section {
+    margin-top: 40px;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 20px;
+}
+
+.slider img {
+    height: 420px;
+    border-radius: 10px;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.features {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>RatnaSindhu App</h1>
+    <p class="subtitle">Explore the beauty of Konkan with smart travel planning</p>
+
+    <div class="card">
+        <h2>Download Application</h2>
+
+        <!-- 🔥 CHANGE THIS LINK AFTER UPLOADING RELEASE -->
+        <a href="app-debug.apk" class="btn">
+            Download APK
+        </a>
+
+        <div class="features">
+            <p>✔ Discover Beaches, Temples, Forts</p>
+            <p>✔ Multi-language Support (Marathi, Hindi, English)</p>
+            <p>✔ Travel Planner & Chatbot</p>
+            <p>✔ Explore Local Businesses</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Screenshots</h2>
+
+        <div class="slider">
+            <img src="ss1.jpeg">
+            <img src="ss2.jpeg">
+            <img src="ss3.jpeg">
+            <img src="ss4.jpeg">
+        </div>
+    </div>
+
+    <div class="footer">
+        Developed for Final Year BCA Project
+    </div>
+
+</div>
+
+</body>
+</html>
