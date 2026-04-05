@@ -8,8 +8,8 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #141e30, #243b55);
     color: white;
     text-align: center;
 }
@@ -19,44 +19,56 @@ body {
 }
 
 h1 {
-    font-size: 34px;
+    font-size: 36px;
+    margin-bottom: 5px;
 }
 
 .subtitle {
     font-size: 16px;
-    opacity: 0.9;
+    opacity: 0.85;
+    margin-bottom: 30px;
 }
 
+/* CARD */
 .card {
     background: white;
     color: black;
-    margin: 30px auto;
+    margin: auto;
     padding: 25px;
     border-radius: 15px;
-    max-width: 350px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    max-width: 380px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
+/* BUTTON */
 .btn {
     display: inline-block;
     padding: 15px 25px;
     font-size: 18px;
     background: #28a745;
     color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     margin-top: 15px;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #218838;
+    background: #1e7e34;
+}
+
+/* FEATURES */
+.features {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 14px;
 }
 
 .section {
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
+/* SLIDER */
 .slider {
     display: flex;
     overflow-x: auto;
@@ -66,21 +78,26 @@ h1 {
 
 .slider img {
     height: 420px;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 .slider::-webkit-scrollbar {
     display: none;
 }
 
-.features {
-    margin-top: 15px;
-    font-size: 14px;
-    text-align: left;
+/* ABOUT */
+.about {
+    max-width: 700px;
+    margin: auto;
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.9;
 }
 
+/* FOOTER */
 .footer {
-    margin-top: 40px;
+    margin-top: 50px;
     font-size: 13px;
     opacity: 0.7;
 }
@@ -91,27 +108,29 @@ h1 {
 
 <div class="container">
 
-    <h1>RatnaSindhu App</h1>
-    <p class="subtitle">Explore the beauty of Konkan with smart travel planning</p>
+    <h1>RatnaSindhu</h1>
+    <p class="subtitle">Your Smart Guide to Explore Konkan Tourism</p>
 
+    <!-- DOWNLOAD CARD -->
     <div class="card">
-        <h2>Download Application</h2>
+        <h2>Download App</h2>
 
-        <!-- 🔥 CHANGE THIS LINK AFTER UPLOADING RELEASE -->
-        <a href="app-debug.apk" class="btn">
+        <a href="https://github.com/haramsiddhi25-max/ratnasindhu-download/releases/download/rtanasindhu/app-debug.apk" class="btn">
             Download APK
         </a>
 
         <div class="features">
-            <p>✔ Discover Beaches, Temples, Forts</p>
-            <p>✔ Multi-language Support (Marathi, Hindi, English)</p>
-            <p>✔ Travel Planner & Chatbot</p>
-            <p>✔ Explore Local Businesses</p>
+            <p>✔ Explore Beaches, Temples, Forts & Waterfalls</p>
+            <p>✔ Multi-language Support (English, Hindi, Marathi)</p>
+            <p>✔ Travel Planner for easy trip management</p>
+            <p>✔ Discover Hotels & Local Businesses</p>
+            <p>✔ Integrated Chatbot for assistance</p>
         </div>
     </div>
 
+    <!-- SCREENSHOTS -->
     <div class="section">
-        <h2>Screenshots</h2>
+        <h2>App Screenshots</h2>
 
         <div class="slider">
             <img src="ss1.jpeg">
@@ -121,8 +140,21 @@ h1 {
         </div>
     </div>
 
+    <!-- ABOUT -->
+    <div class="section">
+        <h2>About the App</h2>
+
+        <div class="about">
+            RatnaSindhu is a tourism-based Android application designed to help users explore the beautiful Konkan region efficiently. 
+            The app provides detailed information about famous beaches, temples, forts, waterfalls, and local attractions. 
+            With its multi-language support and smart travel planning features, users can easily navigate and plan their trips. 
+            The application also includes hotel listings, local businesses, and an interactive chatbot to enhance user experience.
+        </div>
+    </div>
+
+    <!-- FOOTER -->
     <div class="footer">
-        Developed for Final Year BCA Project
+        Developed as Final Year BCA Project | RatnaSindhu App
     </div>
 
 </div>
