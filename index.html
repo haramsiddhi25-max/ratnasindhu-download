@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RatnaSindhu App</title>
+<title>RatnaSindhu</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -18,138 +18,155 @@
 }
 
 body{
-    background:linear-gradient(135deg,#0f172a,#1e293b);
+    background: radial-gradient(circle at top,#0f172a,#020617);
     color:#fff;
+    overflow-x:hidden;
 }
 
-/* CONTAINER */
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:20px;
-}
-
-/* NAVBAR */
+/* NAV */
 .nav{
     display:flex;
     justify-content:space-between;
-    align-items:center;
-    padding:20px 0;
+    padding:20px 40px;
+    position:sticky;
+    top:0;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(12px);
 }
 
 .logo{
-    font-size:22px;
+    font-size:20px;
     font-weight:600;
 }
 
 /* HERO */
 .hero{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    gap:40px;
-    padding:80px 0;
+    text-align:center;
+    padding:100px 20px 60px;
 }
 
-.hero-text h1{
-    font-size:48px;
+.hero h1{
+    font-size:58px;
     font-weight:700;
-    line-height:1.2;
+    background:linear-gradient(90deg,#38bdf8,#22c55e);
+    -webkit-background-clip:text;
+    color:transparent;
+    text-shadow:0 0 30px rgba(56,189,248,0.3);
 }
 
-.hero-text p{
+.hero p{
     margin-top:15px;
-    color:#cbd5f5;
+    color:#94a3b8;
     font-size:18px;
 }
 
 /* BUTTON */
 .btn{
     display:inline-block;
-    margin-top:25px;
-    padding:15px 30px;
+    margin-top:30px;
+    padding:16px 34px;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:600;
     background:linear-gradient(90deg,#22c55e,#4ade80);
     color:#000;
-    border-radius:30px;
-    font-weight:600;
     text-decoration:none;
+    box-shadow:0 0 20px rgba(34,197,94,0.4);
     transition:0.3s;
 }
 
 .btn:hover{
-    transform:scale(1.05);
-}
-
-/* MOCK PHONE */
-.phone{
-    background:#000;
-    border-radius:30px;
-    padding:10px;
-    box-shadow:0 20px 40px rgba(0,0,0,0.5);
-    width:280px;
-    margin:auto;
-}
-
-.phone img{
-    width:100%;
-    border-radius:20px;
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 0 40px rgba(34,197,94,0.7);
 }
 
 /* FEATURES */
 .features{
-    margin-top:80px;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    padding:60px 40px;
 }
 
-.feature{
-    background:#1e293b;
-    padding:25px;
-    border-radius:15px;
+.box{
+    background:linear-gradient(145deg,#0f172a,#020617);
+    padding:28px;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,0.05);
     transition:0.3s;
+    position:relative;
+    overflow:hidden;
 }
 
-.feature:hover{
-    transform:translateY(-5px);
+.box::before{
+    content:'';
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width:200%;
+    height:200%;
+    background:radial-gradient(circle,rgba(56,189,248,0.15),transparent);
+    opacity:0;
+    transition:0.4s;
 }
 
-.feature h3{
+.box:hover::before{
+    opacity:1;
+}
+
+.box:hover{
+    transform:translateY(-10px);
+}
+
+.box h3{
     margin-bottom:10px;
 }
 
-/* SCREENSHOTS */
+/* SECTION */
 .section{
-    margin-top:100px;
     text-align:center;
+    margin-top:80px;
 }
 
+.section h2{
+    font-size:34px;
+}
+
+/* SCREENSHOTS */
 .slider{
     display:flex;
     gap:20px;
     overflow-x:auto;
-    padding-top:20px;
+    padding:30px;
 }
 
 .slider img{
     height:420px;
-    border-radius:15px;
+    border-radius:18px;
+    transition:0.3s;
+}
+
+.slider img:hover{
+    transform:scale(1.05);
 }
 
 /* FOOTER */
 .footer{
-    margin-top:100px;
     text-align:center;
     padding:30px;
-    border-top:1px solid #334155;
-    color:#94a3b8;
+    color:#64748b;
 }
 
-@media(max-width:900px){
-    .hero{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
+/* SCROLL ANIMATION */
+.hidden{
+    opacity:0;
+    transform:translateY(40px);
+    transition:0.6s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
 </style>
@@ -157,84 +174,87 @@ body{
 
 <body>
 
-<div class="container">
+<!-- NAV -->
+<div class="nav">
+    <div class="logo">🌊 RatnaSindhu</div>
+</div>
 
-    <!-- NAV -->
-    <div class="nav">
-        <div class="logo">🌊 RatnaSindhu</div>
+<!-- HERO -->
+<div class="hero hidden">
+    <h1>Explore Konkan Like Never Before</h1>
+    <p>Smart travel guide for beaches, temples, forts and more</p>
+
+    <a href="https://github.com/haramsiddhi25-max/ratnasindhu-download/releases/download/rtanasindhu/app-debug.apk" class="btn">
+        ⬇ Download APK
+    </a>
+</div>
+
+<!-- FEATURES -->
+<div class="features">
+
+    <div class="box hidden">
+        <h3>🏝 Tourism Places</h3>
+        <p>Explore beaches, waterfalls, forts and hidden gems.</p>
     </div>
 
-    <!-- HERO -->
-    <div class="hero">
-
-        <div class="hero-text">
-            <h1>Explore Konkan Like Never Before</h1>
-            <p>Smart tourism app for beaches, temples, forts & travel planning</p>
-
-            <a href="https://github.com/haramsiddhi25-max/ratnasindhu-download/releases/download/rtanasindhu/app-debug.apk" class="btn">
-                ⬇ Download APK
-            </a>
-        </div>
-
-        <div class="phone">
-            <img src="ss1.jpeg">
-        </div>
-
+    <div class="box hidden">
+        <h3>🛕 Temples</h3>
+        <p>Discover temples with full details and directions.</p>
     </div>
 
-    <!-- FEATURES -->
-    <div class="features">
-
-        <div class="feature">
-            <h3>🏝 Tourism Places</h3>
-            <p>Explore beaches, waterfalls, forts and hidden gems.</p>
-        </div>
-
-        <div class="feature">
-            <h3>🛕 Temples</h3>
-            <p>Find spiritual places with complete information.</p>
-        </div>
-
-        <div class="feature">
-            <h3>🏨 Hotels</h3>
-            <p>Discover nearby hotels and accommodations.</p>
-        </div>
-
-        <div class="feature">
-            <h3>🌐 Multi-language</h3>
-            <p>Supports English, Hindi and Marathi.</p>
-        </div>
-
-        <div class="feature">
-            <h3>🧭 Travel Planner</h3>
-            <p>Plan trips efficiently with smart tools.</p>
-        </div>
-
-        <div class="feature">
-            <h3>🤖 Chatbot</h3>
-            <p>Get instant help and travel suggestions.</p>
-        </div>
-
+    <div class="box hidden">
+        <h3>🏨 Hotels</h3>
+        <p>Find nearby hotels and accommodations easily.</p>
     </div>
 
-    <!-- SCREENSHOTS -->
-    <div class="section">
-        <h2>App Screens</h2>
-
-        <div class="slider">
-            <img src="ss1.jpeg">
-            <img src="ss2.jpeg">
-            <img src="ss3.jpeg">
-            <img src="ss4.jpeg">
-        </div>
+    <div class="box hidden">
+        <h3>🌐 Multi-language</h3>
+        <p>Supports English, Hindi and Marathi.</p>
     </div>
 
-    <!-- FOOTER -->
-    <div class="footer">
-        © 2026 RatnaSindhu App • BCA Final Year Project
+    <div class="box hidden">
+        <h3>🧭 Travel Planner</h3>
+        <p>Plan your trips smartly with built-in tools.</p>
+    </div>
+
+    <div class="box hidden">
+        <h3>🤖 Chatbot</h3>
+        <p>Get instant help and travel suggestions.</p>
     </div>
 
 </div>
+
+<!-- SCREENSHOTS -->
+<div class="section hidden">
+    <h2>App Preview</h2>
+
+    <div class="slider">
+        <img src="ss1.jpeg">
+        <img src="ss2.jpeg">
+        <img src="ss3.jpeg">
+        <img src="ss4.jpeg">
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 RatnaSindhu • BCA Final Year Project
+</div>
+
+<!-- JS FOR ANIMATION -->
+<script>
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+document.querySelectorAll(".hidden").forEach(el=>{
+    observer.observe(el);
+});
+</script>
 
 </body>
 </html>
