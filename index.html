@@ -3,179 +3,188 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RatnaSindhu</title>
 
-<title>RatnaSindhu App</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
 
 body{
-    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:white;
+    background:#0b0f1a;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+.nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 40px;
+    position:fixed;
+    width:100%;
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,0.4);
+}
+
+.logo{
+    font-weight:700;
+    font-size:20px;
 }
 
 /* HERO */
 .hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:60px 20px;
+    padding:20px;
 }
 
 .hero h1{
-    font-size:42px;
-    font-weight:600;
+    font-size:56px;
+    background:linear-gradient(90deg,#00f2fe,#4facfe);
+    -webkit-background-clip:text;
+    color:transparent;
 }
 
 .hero p{
-    opacity:0.8;
-    margin-top:10px;
-}
-
-/* CARD */
-.card{
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(12px);
-    border-radius:20px;
-    padding:30px;
-    max-width:400px;
-    margin:30px auto;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    margin-top:15px;
+    opacity:0.7;
 }
 
 /* BUTTON */
 .btn{
-    display:inline-block;
-    padding:15px 25px;
-    margin-top:15px;
-    background: linear-gradient(45deg,#00c853,#64dd17);
-    color:white;
-    border-radius:12px;
-    text-decoration:none;
+    margin-top:25px;
+    padding:15px 30px;
+    background:linear-gradient(90deg,#00f2fe,#4facfe);
+    border:none;
+    border-radius:30px;
     font-size:18px;
+    color:#000;
+    font-weight:600;
+    cursor:pointer;
+    text-decoration:none;
     transition:0.3s;
 }
 
 .btn:hover{
-    transform: scale(1.05);
+    transform:scale(1.08);
 }
 
 /* FEATURES */
 .features{
     display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-    padding:40px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    padding:80px 40px;
 }
 
-.feature-box{
-    background: rgba(255,255,255,0.1);
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-    backdrop-filter: blur(10px);
+.box{
+    background:rgba(255,255,255,0.05);
+    padding:25px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
     transition:0.3s;
 }
 
-.feature-box:hover{
-    transform: translateY(-5px);
+.box:hover{
+    transform:translateY(-10px);
+    background:rgba(255,255,255,0.08);
 }
 
 /* SCREENSHOTS */
+.screens{
+    padding:60px 20px;
+    text-align:center;
+}
+
 .slider{
     display:flex;
-    overflow-x:auto;
     gap:20px;
-    padding:20px;
+    overflow-x:auto;
+    padding-top:20px;
 }
 
 .slider img{
-    height:420px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.5);
+    height:450px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.6);
 }
 
 /* ABOUT */
 .about{
+    padding:80px 20px;
+    text-align:center;
     max-width:800px;
     margin:auto;
-    padding:40px 20px;
-    text-align:center;
-    line-height:1.6;
-    opacity:0.9;
+    opacity:0.8;
 }
 
 /* FOOTER */
 .footer{
     text-align:center;
     padding:20px;
-    font-size:14px;
-    opacity:0.7;
+    opacity:0.6;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>🌊 RatnaSindhu</h1>
-    <p>Explore Konkan Like Never Before</p>
+<!-- NAV -->
+<div class="nav">
+    <div class="logo">🌊 RatnaSindhu</div>
 </div>
 
-<!-- DOWNLOAD -->
-<div class="card">
-    <h2>Download App</h2>
+<!-- HERO -->
+<div class="hero">
+    <h1>Explore Konkan Smartly</h1>
+    <p>Your complete travel guide in one app</p>
 
     <a href="https://github.com/haramsiddhi25-max/ratnasindhu-download/releases/download/rtanasindhu/app-debug.apk" class="btn">
-        🚀 Download APK
+        Download APK
     </a>
 </div>
 
 <!-- FEATURES -->
 <div class="features">
 
-    <div class="feature-box">🏝️ Beaches & Tourism</div>
-    <div class="feature-box">🛕 Temples & Culture</div>
-    <div class="feature-box">🏰 Forts & History</div>
-    <div class="feature-box">🌊 Waterfalls</div>
-    <div class="feature-box">🏨 Hotels & Stay</div>
-    <div class="feature-box">🤖 Smart Chatbot</div>
-    <div class="feature-box">🌐 Multi-language</div>
-    <div class="feature-box">🧭 Travel Planner</div>
+    <div class="box">🏝 Discover Beaches</div>
+    <div class="box">🛕 Temples & Culture</div>
+    <div class="box">🏰 Historic Forts</div>
+    <div class="box">🌊 Waterfalls</div>
+    <div class="box">🏨 Hotels & Stay</div>
+    <div class="box">🤖 AI Chatbot</div>
 
 </div>
 
 <!-- SCREENSHOTS -->
-<div class="hero">
-    <h2>App Preview</h2>
-</div>
+<div class="screens">
+    <h2>App Screens</h2>
 
-<div class="slider">
-    <img src="ss1.jpeg">
-    <img src="ss2.jpeg">
-    <img src="ss3.jpeg">
-    <img src="ss4.jpeg">
+    <div class="slider">
+        <img src="ss1.jpeg">
+        <img src="ss2.jpeg">
+        <img src="ss3.jpeg">
+        <img src="ss4.jpeg">
+    </div>
 </div>
 
 <!-- ABOUT -->
 <div class="about">
-    <h2>About RatnaSindhu</h2>
+    <h2>About</h2>
     <p>
-        RatnaSindhu is a smart tourism app designed for exploring the beautiful Konkan region. 
-        Discover beaches, temples, forts, waterfalls, and plan your trips easily with a modern interface.
-        With multi-language support and integrated chatbot, your travel becomes smarter and easier.
+        RatnaSindhu helps you explore Konkan with ease. Plan trips, discover places, 
+        and enjoy a seamless travel experience with multi-language support and smart tools.
     </p>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-    🚀 Final Year BCA Project | RatnaSindhu App
+    BCA Final Year Project • RatnaSindhu
 </div>
 
 </body>
