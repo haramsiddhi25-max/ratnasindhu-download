@@ -3,160 +3,179 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>RatnaSindhu App</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to right, #141e30, #243b55);
-    color: white;
-    text-align: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-.container {
-    padding: 40px 20px;
+body{
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
 }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 5px;
+/* HERO */
+.hero{
+    text-align:center;
+    padding:60px 20px;
 }
 
-.subtitle {
-    font-size: 16px;
-    opacity: 0.85;
-    margin-bottom: 30px;
+.hero h1{
+    font-size:42px;
+    font-weight:600;
+}
+
+.hero p{
+    opacity:0.8;
+    margin-top:10px;
 }
 
 /* CARD */
-.card {
-    background: white;
-    color: black;
-    margin: auto;
-    padding: 25px;
-    border-radius: 15px;
-    max-width: 380px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+.card{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    border-radius:20px;
+    padding:30px;
+    max-width:400px;
+    margin:30px auto;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 /* BUTTON */
-.btn {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 18px;
-    background: #28a745;
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    margin-top: 15px;
-    transition: 0.3s;
+.btn{
+    display:inline-block;
+    padding:15px 25px;
+    margin-top:15px;
+    background: linear-gradient(45deg,#00c853,#64dd17);
+    color:white;
+    border-radius:12px;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
 }
 
-.btn:hover {
-    background: #1e7e34;
+.btn:hover{
+    transform: scale(1.05);
 }
 
 /* FEATURES */
-.features {
-    margin-top: 20px;
-    text-align: left;
-    font-size: 14px;
+.features{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:40px;
 }
 
-.section {
-    margin-top: 50px;
+.feature-box{
+    background: rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    backdrop-filter: blur(10px);
+    transition:0.3s;
 }
 
-/* SLIDER */
-.slider {
-    display: flex;
-    overflow-x: auto;
-    gap: 15px;
-    padding: 20px;
+.feature-box:hover{
+    transform: translateY(-5px);
 }
 
-.slider img {
-    height: 420px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+/* SCREENSHOTS */
+.slider{
+    display:flex;
+    overflow-x:auto;
+    gap:20px;
+    padding:20px;
 }
 
-.slider::-webkit-scrollbar {
-    display: none;
+.slider img{
+    height:420px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.5);
 }
 
 /* ABOUT */
-.about {
-    max-width: 700px;
-    margin: auto;
-    font-size: 15px;
-    line-height: 1.6;
-    opacity: 0.9;
+.about{
+    max-width:800px;
+    margin:auto;
+    padding:40px 20px;
+    text-align:center;
+    line-height:1.6;
+    opacity:0.9;
 }
 
 /* FOOTER */
-.footer {
-    margin-top: 50px;
-    font-size: 13px;
-    opacity: 0.7;
+.footer{
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+    opacity:0.7;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- HERO -->
+<div class="hero">
+    <h1>🌊 RatnaSindhu</h1>
+    <p>Explore Konkan Like Never Before</p>
+</div>
 
-    <h1>RatnaSindhu</h1>
-    <p class="subtitle">Your Smart Guide to Explore Konkan Tourism</p>
+<!-- DOWNLOAD -->
+<div class="card">
+    <h2>Download App</h2>
 
-    <!-- DOWNLOAD CARD -->
-    <div class="card">
-        <h2>Download App</h2>
+    <a href="https://github.com/haramsiddhi25-max/ratnasindhu-download/releases/download/rtanasindhu/app-debug.apk" class="btn">
+        🚀 Download APK
+    </a>
+</div>
 
-        <a href="https://github.com/haramsiddhi25-max/ratnasindhu-download/releases/download/rtanasindhu/app-debug.apk" class="btn">
-            Download APK
-        </a>
+<!-- FEATURES -->
+<div class="features">
 
-        <div class="features">
-            <p>✔ Explore Beaches, Temples, Forts & Waterfalls</p>
-            <p>✔ Multi-language Support (English, Hindi, Marathi)</p>
-            <p>✔ Travel Planner for easy trip management</p>
-            <p>✔ Discover Hotels & Local Businesses</p>
-            <p>✔ Integrated Chatbot for assistance</p>
-        </div>
-    </div>
+    <div class="feature-box">🏝️ Beaches & Tourism</div>
+    <div class="feature-box">🛕 Temples & Culture</div>
+    <div class="feature-box">🏰 Forts & History</div>
+    <div class="feature-box">🌊 Waterfalls</div>
+    <div class="feature-box">🏨 Hotels & Stay</div>
+    <div class="feature-box">🤖 Smart Chatbot</div>
+    <div class="feature-box">🌐 Multi-language</div>
+    <div class="feature-box">🧭 Travel Planner</div>
 
-    <!-- SCREENSHOTS -->
-    <div class="section">
-        <h2>App Screenshots</h2>
+</div>
 
-        <div class="slider">
-            <img src="ss1.jpeg">
-            <img src="ss2.jpeg">
-            <img src="ss3.jpeg">
-            <img src="ss4.jpeg">
-        </div>
-    </div>
+<!-- SCREENSHOTS -->
+<div class="hero">
+    <h2>App Preview</h2>
+</div>
 
-    <!-- ABOUT -->
-    <div class="section">
-        <h2>About the App</h2>
+<div class="slider">
+    <img src="ss1.jpeg">
+    <img src="ss2.jpeg">
+    <img src="ss3.jpeg">
+    <img src="ss4.jpeg">
+</div>
 
-        <div class="about">
-            RatnaSindhu is a tourism-based Android application designed to help users explore the beautiful Konkan region efficiently. 
-            The app provides detailed information about famous beaches, temples, forts, waterfalls, and local attractions. 
-            With its multi-language support and smart travel planning features, users can easily navigate and plan their trips. 
-            The application also includes hotel listings, local businesses, and an interactive chatbot to enhance user experience.
-        </div>
-    </div>
+<!-- ABOUT -->
+<div class="about">
+    <h2>About RatnaSindhu</h2>
+    <p>
+        RatnaSindhu is a smart tourism app designed for exploring the beautiful Konkan region. 
+        Discover beaches, temples, forts, waterfalls, and plan your trips easily with a modern interface.
+        With multi-language support and integrated chatbot, your travel becomes smarter and easier.
+    </p>
+</div>
 
-    <!-- FOOTER -->
-    <div class="footer">
-        Developed as Final Year BCA Project | RatnaSindhu App
-    </div>
-
+<!-- FOOTER -->
+<div class="footer">
+    🚀 Final Year BCA Project | RatnaSindhu App
 </div>
 
 </body>
